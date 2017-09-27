@@ -1,6 +1,6 @@
 package com.company.lesson5;
 
-public class Main {
+public class Lesson6Main {
 
     public static void main(String[] args) {
         PrintDays.days();
