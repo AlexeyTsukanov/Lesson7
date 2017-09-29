@@ -5,7 +5,10 @@ import java.util.Scanner;
 
 public class Girland {
     public static void moov() {
-        int[] gerland = {1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0};
+        int random = (int) (Math.random() * 10000000);
+        String str = Integer.toBinaryString(random);
+        int[] gerland = Arrays.stream(str.split("")).mapToInt(Integer::parseInt).toArray();
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("1. Лампочка замигает \n2. герлянда сдвинется \n3.проверка первой позиции.");
         int a = testInt(scanner);

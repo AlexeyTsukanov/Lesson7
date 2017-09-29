@@ -1,4 +1,4 @@
-package com.company.lesson5;
+package com.company.lesson6;
 
 public class MasivTest {
     public static void randomNumbers() {

@@ -11,7 +11,7 @@ public class SortMinMax {
     }
 
     public static int[][] newArray(int[][] array) {
-        int[][] newArray = {{0, 0}, {0, 0}, {0, 0}, {0, 0}, {0, 0}};
+        int[][] newArray = new int[5][2];
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = array[i].length - 1; j >= 0; j--) {
                 for (int k = 0; k < j; k++) {

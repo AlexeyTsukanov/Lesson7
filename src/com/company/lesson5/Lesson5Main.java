@@ -11,7 +11,7 @@ public class Lesson5Main {
         //TestWhile.taskPrint();
         //TestDoWhile.numbersPrint();
         //TestFor.charPrint();
-        NewGarland.moov(scanner);
-        //Factorial.foundFactorial();
+        //NewGarland.moov(scanner);
+        Factorial.foundFactorial();
     }
 }

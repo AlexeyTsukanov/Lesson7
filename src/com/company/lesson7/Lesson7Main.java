@@ -6,9 +6,9 @@ public class Lesson7Main {
         //TestArreys.print();
         //InverterTest.invertion();
         //BubbleSort.print();
-        NewBubblesSort.print();
+        //NewBubblesSort.print();
         //SortMinMax.sort();
-        //Girland.moov();
+        Girland.moov();
         //SelectionSorter.sort();
         //NewSelectionSorter.sort();
     }

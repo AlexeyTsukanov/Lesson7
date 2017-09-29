@@ -1,4 +1,4 @@
-package com.company.lesson5;
+package com.company.lesson6;
 
 public class PrintDays {
     public static void days() {
