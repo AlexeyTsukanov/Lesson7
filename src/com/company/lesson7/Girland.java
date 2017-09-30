@@ -7,7 +7,10 @@ public class Girland {
     public static void moov() {
         int random = (int) (Math.random() * 10000000);
         String str = Integer.toBinaryString(random);
-        int[] gerland = Arrays.stream(str.split("")).mapToInt(Integer::parseInt).toArray();
+        int[] timeArrey = Arrays.stream(str.split("")).mapToInt(Integer::parseInt).toArray();
+        int[] gerland = new int[32];
+        System.arraycopy(timeArrey,0,gerland,0,timeArrey.length);
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("1. Лампочка замигает \n2. герлянда сдвинется \n3.проверка первой позиции.");
