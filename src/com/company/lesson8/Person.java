@@ -4,14 +4,19 @@ public class Person {
     String fullName;
     int age;
 
-    void move(){}
+    Person() {
+    }
 
-    void talk(){}
-
-    Person(){}
-
-    Person(String f, int a){
+    Person(String f, int a) {
         fullName = f;
         age = a;
+    }
+
+    void move() {
+        System.out.println(fullName + "is moving!");
+    }
+
+    void talk() {
+        System.out.println(fullName + " said: \" I`m " + age + " years old\"");
     }
 }

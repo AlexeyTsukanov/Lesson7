@@ -23,11 +23,11 @@ public class PhoneTest {
         System.out.println(phone2.getPhoneNumber());
         System.out.println(phone3.getPhoneNumber());
 
-        phone1.reciveCall("Dima");
-        phone2.reciveCall("Nik");
-        phone3.reciveCall("Vasya");
+        phone1.receiveCall("Dima");
+        phone2.receiveCall("Nik");
+        phone3.receiveCall("Vasya");
 
-        phone1.reciveCall("Petya", "0959387611");
+        phone1.receiveCall("Petya", "0959387611");
         phone4.info();
     }
 }

@@ -4,12 +4,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Girland {
-    public static void moov() {
+    public static void move() {
         int random = (int) (Math.random() * 10000000);
         String str = Integer.toBinaryString(random);
         int[] timeArrey = Arrays.stream(str.split("")).mapToInt(Integer::parseInt).toArray();
         int[] gerland = new int[32];
-        System.arraycopy(timeArrey,0,gerland,0,timeArrey.length);
+        System.arraycopy(timeArrey, 0, gerland, 0, timeArrey.length);
 
 
         Scanner scanner = new Scanner(System.in);
@@ -21,7 +21,7 @@ public class Girland {
                     garlandShine(gerland, scanner);
                     break;
                 case 2:
-                    garlandMoove(gerland, scanner);
+                    garlandMove(gerland, scanner);
                     break;
                 case 3:
                     chekGarland(gerland);
@@ -38,7 +38,7 @@ public class Girland {
         }
     }
 
-    private static void garlandMoove(int[] gerland, Scanner scanner) {
+    private static void garlandMove(int[] gerland, Scanner scanner) {
         System.out.println("На сколько лампочек герлянда сдвинется влево?");
         int moov = testInt(scanner);
         for (int i = 0; i < moov; i++) {
