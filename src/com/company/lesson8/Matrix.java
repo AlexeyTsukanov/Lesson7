@@ -3,27 +3,36 @@ package com.company.lesson8;
 import java.util.Arrays;
 
 public class Matrix {
-    int[][] array = {{1, 1, 1, 1}, {1, 1, 1, 1}};
-    int a = array.length;
-    int b = array[0].length;
+    private int[][] inputArray;
+    private int[][] array = {{1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}};
+    private int a = array.length;
+    private int b = array[0].length;
 
-    int[][] plus(int[][] inputArray) {
+    Matrix(int[][] array) {
+        inputArray = array;
+    }
+
+    Matrix plus(Matrix matrix) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++)
-                inputArray[i][j] += array[i][j];
+                matrix.inputArray[i][j] += array[i][j];
         }
+        return matrix;
+    }
+
+    public int[][] getArray() {
         return inputArray;
     }
 
-    int[][] multiplication(int a) {
+    Matrix multiplication(Matrix matrix, int a) {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++)
-                array[i][j] *= a;
+                inputArray[i][j] *= a;
         }
-        return array;
+        return matrix;
     }
 
     void print() {
-        System.out.println(Arrays.deepToString(array));
+        System.out.println(Arrays.deepToString(inputArray));
     }
 }

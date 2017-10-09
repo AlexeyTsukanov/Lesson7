@@ -4,8 +4,10 @@ public class Phone {
     String number;
     String model;
     double weight;
+    private static int count = 0;
 
     Phone() {
+        count++;
     }
 
     Phone(String n, String m, double w) {
@@ -15,19 +17,32 @@ public class Phone {
         weight = w;
     }
 
-    void receiveCall(String name, String number) {
+    static int getCount() {
+        return count;
+    }
+
+    public void receiveCall(String name, String number) {
         System.out.println("Вам звонит: " + name + "\nНомер телефона: " + number);
     }
 
-    void info() {
+    public void info() {
         System.out.println("Номер: " + number + " Модель: " + model + " Вес: " + weight);
     }
 
-    void receiveCall(String name) {
+    public void receiveCall(String name) {
         System.out.println("Звонит {" + name + "}");
     }
 
-    String getPhoneNumber() {
+    public String getPhoneNumber() {
         return number;
+    }
+
+    public void sendMessage(String sendNumber) {
+        System.out.println(sendNumber);
+    }
+
+    protected void finalize() {
+        System.out.println("In finalize");
+        count--;
     }
 }

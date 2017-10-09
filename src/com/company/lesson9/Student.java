@@ -11,6 +11,10 @@ public class Student {
     Scanner scn = new Scanner(System.in);
     private String date;
     private String dateReturn;
+    private int takeBookQuantity;
+    private String[] bookTopic;
+    private int returnBookQuantity;
+    private String[] returnBookTopic;
 
     Student(String fullName, int ticket, String faculty, String bornDate, String telephone) {
         this.fullName = fullName;
@@ -20,7 +24,7 @@ public class Student {
         this.telephone = telephone;
     }
 
-    void takeBook() {
+    public void takeBook() {
         System.out.println("Введите день получения книги.");
         int dd = scn.nextInt();
         System.out.println("Введите месяц получения книги.");
@@ -30,7 +34,19 @@ public class Student {
         date = dd + "." + mm + "." + yy;
     }
 
-    void returnBook() {
+    public void takeBook(int takeBookQuantity) {
+        this.takeBookQuantity = takeBookQuantity;
+    }
+
+    public void takeBook(String... bookTopic) {
+        this.bookTopic = bookTopic;
+    }
+
+    public void takeBook(Book... book) {
+        System.out.println("Количество обьектов: " + book.length);
+    }
+
+    public void returnBook() {
         System.out.println("Введите день сдачи книги.");
         int dd = scn.nextInt();
         System.out.println("Введите месяц сдачи книги.");
@@ -40,11 +56,23 @@ public class Student {
         dateReturn = dd + "." + mm + "." + yy;
     }
 
-    void infoTake() {
+    public void returnBook(int returnBookQuantity) {
+        this.returnBookQuantity = returnBookQuantity;
+    }
+
+    public void returnBook(String... bookTopic) {
+        this.returnBookTopic = bookTopic;
+    }
+
+    public void returnBook(Book... book) {
+        System.out.println("Количество обьектов: " + book.length);
+    }
+
+    public void infoTake() {
         System.out.println(fullName + " получил книгу " + date);
     }
 
-    void infoReturn() {
+    public void infoReturn() {
         System.out.println(fullName + " вернул книгу " + dateReturn);
     }
 }

@@ -29,5 +29,7 @@ public class PhoneTest {
 
         phone1.receiveCall("Petya", "0959387611");
         phone4.info();
+
+        System.out.println(Phone.getCount());
     }
 }
