@@ -3,36 +3,42 @@ package com.company.lesson8;
 import java.util.Arrays;
 
 public class Matrix {
-    private int[][] inputArray;
-    private int[][] array = {{1, 1, 1, 1, 1}, {1, 1, 1, 1, 1}};
-    private int a = array.length;
-    private int b = array[0].length;
+    private int[][] array;
+    private int leng;
+    private int height;
 
     Matrix(int[][] array) {
-        inputArray = array;
+        this.array = array;
+        leng = array.length;
+        height = array[0].length;
     }
+    Matrix(){}
 
     Matrix plus(Matrix matrix) {
+        int[][] newArray = new int[leng][height];
+        Matrix newMatrix = new Matrix(newArray);
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++)
-                matrix.inputArray[i][j] += array[i][j];
+                newMatrix.array[i][j] = matrix.array[i][j] + array[i][j];
         }
-        return matrix;
+        return newMatrix;
     }
 
     public int[][] getArray() {
-        return inputArray;
+        return array;
     }
 
-    Matrix multiplication(Matrix matrix, int a) {
+    Matrix multiplication(int a) {
+        int[][] newArray = new int[leng][height];
+        Matrix newMatrix = new Matrix(newArray);
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++)
-                inputArray[i][j] *= a;
+                newMatrix.array[i][j] = array[i][j] *= a;
         }
-        return matrix;
+        return newMatrix;
     }
 
     void print() {
-        System.out.println(Arrays.deepToString(inputArray));
+        System.out.println(Arrays.deepToString(array));
     }
 }

@@ -1,27 +1,41 @@
 package com.company.lesson10;
 
 public class Numbers {
-    private int A;
-    private int B;
+    private int a;
+    private int b;
 
     Numbers(int A, int B) {
-        this.A = A;
-        this.B = B;
+        this.a = a;
+        this.b = b;
     }
 
+    Numbers(){}
+
     public void print() {
-        System.out.println(A);
-        if (A < B) {
-            if (A != B) {
-                A++;
+        System.out.println(a);
+        if (a < b) {
+                a++;
                 print();
-            }
         }
-        if (A > B) {
-            if (A != B) {
-                A--;
+        if (a > b) {
+                a--;
                 print();
-            }
         }
+    }
+
+    public int getA() {
+        return a;
+    }
+
+    public void setA(int a) {
+        this.a = a;
+    }
+
+    public int getB() {
+        return a;
+    }
+
+    public void setB(int b) {
+        this.b = b;
     }
 }

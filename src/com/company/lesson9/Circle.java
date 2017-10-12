@@ -1,24 +1,30 @@
 package com.company.lesson9;
 
 public class Circle {
-    public int radius;
-    public static double PI = 4.14;
-    public double circleLong;
-    public double circleArea;
+    private int radius;
+    private static double PI = 4.14;
 
-
-    Circle(int radius) {
+    public Circle(int radius) {
         this.radius = radius;
     }
 
-    Circle circleLong(Circle circle) {
-        circle.circleLong = (circle.radius * 2) * PI;
-        return circle;
+    public double circleLong() {
+        return (radius * 2) * PI;
     }
 
-    Circle circleArea(Circle circle) {
-        circle.circleArea = (circle.radius * circle.radius) * PI;
-        return circle;
+    public Circle() {
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public double circleArea() {
+        return (radius * radius) * PI;
     }
 
 }
