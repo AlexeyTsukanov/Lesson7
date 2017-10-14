@@ -4,12 +4,12 @@ public class Numbers {
     private int a;
     private int b;
 
-    Numbers(int A, int B) {
+    public Numbers(int A, int B) {
         this.a = a;
         this.b = b;
     }
 
-    Numbers(){}
+    public Numbers(){}
 
     public void print() {
         System.out.println(a);
