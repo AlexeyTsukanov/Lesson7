@@ -1,4 +1,4 @@
-package com.company.Lesson11.Task4;
+package com.company.lesson11.task4;
 
 public class Horse extends Animal {
 
@@ -7,8 +7,10 @@ public class Horse extends Animal {
     }
 
     public void makeNoise() {
+        System.out.println("Лошадь шумит.");
     }
 
     public void eat() {
+        System.out.println("Лошадь ест " + getFood());
     }
 }

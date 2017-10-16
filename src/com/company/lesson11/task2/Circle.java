@@ -1,4 +1,4 @@
-package com.company.Lesson11.Task2;
+package com.company.lesson11.task2;
 
 public class Circle extends Shape {
     private int coordinateX;

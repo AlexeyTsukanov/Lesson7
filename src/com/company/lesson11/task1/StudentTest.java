@@ -1,7 +1,4 @@
-package com.company.Lesson11.Task1;
-
-import com.company.Lesson11.Task1.Aspirant;
-import com.company.Lesson11.Task1.Student;
+package com.company.lesson11.task1;
 
 public class StudentTest {
     public static void main(String[] args) {

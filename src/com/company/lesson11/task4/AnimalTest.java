@@ -1,10 +1,10 @@
-package com.company.Lesson11.Task4;
+package com.company.lesson11.task4;
 
 public class AnimalTest {
     public static void main(String[] args) {
-        Cat cat = new Cat("some food", "some Location");
-        Dog dog = new Dog("some food2", "some Location2");
-        Horse horse = new Horse("some food3", "some Location3");
+        Cat cat = new Cat("Кошачий корм", "дома");
+        Dog dog = new Dog("Собачий корм", "во дворе");
+        Horse horse = new Horse("Сено", "Стойло");
 
         Animal[] animals = new Animal[3];
         animals[0] = cat;
@@ -15,6 +15,9 @@ public class AnimalTest {
 
         for (Animal animal : animals){
             veterenar.treatAnimal(animal);
+            animal.eat();
+            animal.makeNoise();
+            animal.sleep();
         }
     }
 }

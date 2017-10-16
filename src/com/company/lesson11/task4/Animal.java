@@ -1,4 +1,4 @@
-package com.company.Lesson11.Task4;
+package com.company.lesson11.task4;
 
 public class Animal {
     private String food;
@@ -10,12 +10,14 @@ public class Animal {
     }
 
     public void makeNoise() {
+        System.out.println("Животное шумит.");
     }
 
     public void eat() {
     }
 
     public void sleep() {
+        System.out.println("Животное спит.");
     }
 
     public void setFood(String food) {

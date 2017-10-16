@@ -1,12 +1,12 @@
-package com.company.Lesson11.Task3;
+package com.company.lesson11.task3;
 
 public abstract class Flower {
     private String name;
     private int term;
-    private static int noun;
+    private static int quantity;
 
     public Flower(int n){
-        noun += n;
+        quantity += n;
     }
 
     public Flower(){}
@@ -14,7 +14,7 @@ public abstract class Flower {
     abstract int colculateOfCoust();
 
     public static void ollSails(){
-        System.out.println("Всего продано цветов " + noun);
+        System.out.println("Всего продано цветов " + quantity);
     }
 
     public String getName() {
@@ -33,11 +33,11 @@ public abstract class Flower {
         this.term = term;
     }
 
-    public static int getNoun() {
-        return noun;
+    public static int getQuantity() {
+        return quantity;
     }
 
-    public static void setNoun(int noun) {
-        Flower.noun = noun;
+    public static void setQuantity(int quantity) {
+        Flower.quantity = quantity;
     }
 }

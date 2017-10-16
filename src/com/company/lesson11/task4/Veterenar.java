@@ -1,4 +1,4 @@
-package com.company.Lesson11.Task4;
+package com.company.lesson11.task4;
 
 public class Veterenar {
     public void treatAnimal(Animal animal){

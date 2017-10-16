@@ -1,4 +1,4 @@
-package com.company.Lesson11.Task1;
+package com.company.lesson11.task1;
 
 public class Aspirant extends Student {
     private String work;

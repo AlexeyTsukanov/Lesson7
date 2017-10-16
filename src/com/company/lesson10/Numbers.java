@@ -9,17 +9,18 @@ public class Numbers {
         this.b = b;
     }
 
-    public Numbers(){}
+    public Numbers() {
+    }
 
     public void print() {
         System.out.println(a);
         if (a < b) {
-                a++;
-                print();
+            a++;
+            print();
         }
         if (a > b) {
-                a--;
-                print();
+            a--;
+            print();
         }
     }
 

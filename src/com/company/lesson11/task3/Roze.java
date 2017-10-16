@@ -1,21 +1,19 @@
-package com.company.Lesson11.Task3;
+package com.company.lesson11.task3;
 
 public class Roze extends Flower {
     private int costOfOne = 14;
-    private int noun;
+    private int quantity;
 
-    public Roze(int noun){
-        super(noun);
-        this.noun = noun;
+    public Roze(int quantity){
+        super(quantity);
+        this.quantity = quantity;
     }
 
-    public Roze(){
-        super();
-    }
+    public Roze(){}
 
     @Override
     int colculateOfCoust() {
-        return noun * costOfOne;
+        return quantity * costOfOne;
     }
 
     public int getCostOfOne() {
