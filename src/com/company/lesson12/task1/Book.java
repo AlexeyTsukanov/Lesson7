@@ -13,9 +13,9 @@ public class Book implements Printable {
     }
 
     public static void printBook(Printable[] printables){
-        for (int i = 0; i < printables.length; i++){
-            if (printables[i] instanceof Book){
-                System.out.println(printables[i].toString());
+        for (Printable printable : printables){
+            if (printable instanceof Book){
+                System.out.println(printable);
             }
         }
     }

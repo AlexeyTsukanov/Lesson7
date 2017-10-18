@@ -11,9 +11,9 @@ public class Magazines implements Printable {
     }
 
     public static void printMagazines(Printable[] printables){
-        for (int i = 0; i < printables.length; i++){
-            if (printables[i] instanceof Magazines){
-                System.out.println(printables[i].toString());
+        for (Printable printable : printables){
+            if (printable instanceof Magazines){
+                System.out.println(printable);
             }
         }
     }
