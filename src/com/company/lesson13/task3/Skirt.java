@@ -14,7 +14,6 @@ public class Skirt extends Cloth implements WomenClothing {
     public void clothAWoman() {
         System.out.println("Одеваю юбку на женщину");
         System.out.println(Size.valueOf(size).getDescription());
-        System.out.println("Размер " + Size.valueOf(size).getEuroSize());
         System.out.println(this);
     }
 }
