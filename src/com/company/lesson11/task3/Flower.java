@@ -5,15 +5,18 @@ public abstract class Flower {
     private int term;
     private static int quantity;
 
-    public Flower(int n){
+    public Flower(int n, String name, int term) {
         quantity += n;
+        this.name = name;
+        this.term = term;
     }
 
-    public Flower(){}
+    public Flower() {
+    }
 
     abstract int colculateOfCoust();
 
-    public static void ollSails(){
+    public static void ollSails() {
         System.out.println("Всего продано цветов " + quantity);
     }
 
@@ -39,5 +42,22 @@ public abstract class Flower {
 
     public static void setQuantity(int quantity) {
         Flower.quantity = quantity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Flower flower = (Flower) o;
+
+        if (term != flower.term) return false;
+        return name != null ? name.equals(flower.name) : flower.name == null;
+    }
+
+    @Override
+    public String toString() {
+        return "Наименование цветка - '" + name + '\'' +
+                ", Срок хранения - " + term;
     }
 }

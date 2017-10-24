@@ -19,6 +19,8 @@ public class FlowerTest {
             sum += flower.colculateOfCoust();
         }
 
+        System.out.println(flowers[0]);
+
         System.out.println(sum);
 
         Flower.ollSails();

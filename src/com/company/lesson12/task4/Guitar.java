@@ -21,4 +21,20 @@ public class Guitar implements Instrument {
     public void setNumberOfStrings(int numberOfStrings) {
         this.numberOfStrings = numberOfStrings;
     }
+
+    @Override
+    public String toString() {
+        return "Гитара " +
+                "Колличество струн = " + numberOfStrings;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Guitar guitar = (Guitar) o;
+
+        return numberOfStrings == guitar.numberOfStrings;
+    }
 }

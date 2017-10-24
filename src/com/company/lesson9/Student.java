@@ -16,7 +16,7 @@ public class Student {
     private int returnBookQuantity;
     private String[] returnBookTopic;
 
-    Student(String fullName, int ticket, String faculty, String bornDate, String telephone) {
+    public Student(String fullName, int ticket, String faculty, String bornDate, String telephone) {
         this.fullName = fullName;
         this.ticket = ticket;
         this.faculty = faculty;

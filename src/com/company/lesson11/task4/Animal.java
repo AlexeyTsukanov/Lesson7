@@ -14,6 +14,7 @@ public class Animal {
     }
 
     public void eat() {
+        System.out.println("Животное ест " + food);
     }
 
     public void sleep() {
@@ -34,5 +35,22 @@ public class Animal {
 
     public String getLocation() {
         return location;
+    }
+
+    @Override
+    public String toString() {
+        return "корм - '" + food + '\'' +
+                ", живет " + location;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Animal animal = (Animal) o;
+
+        if (food != null ? !food.equals(animal.food) : animal.food != null) return false;
+        return location != null ? location.equals(animal.location) : animal.location == null;
     }
 }

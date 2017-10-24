@@ -5,7 +5,7 @@ public class Hrizontem extends Flower {
     private int quantity;
 
     public Hrizontem(int quantity) {
-        super(quantity);
+        super(quantity, "Hrizontem", 12);
         this.quantity = quantity;
     }
 

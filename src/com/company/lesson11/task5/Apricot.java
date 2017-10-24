@@ -4,13 +4,9 @@ public class Apricot extends Fruit {
     private double cost;
     private String name = "Абрикос";
 
-    public Apricot(double weight, double cost){
+    public Apricot(double weight, double cost) {
         super(weight);
         this.cost = cost;
-    }
-
-    public double cost(){
-        return cost * this.getWeight();
     }
 
     public double getCost() {
@@ -23,5 +19,28 @@ public class Apricot extends Fruit {
 
     public String getName() {
         return name;
+    }
+
+    public double cost() {
+        return cost * this.getWeight();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Apricot apricot = (Apricot) o;
+
+        if (Double.compare(apricot.cost, cost) != 0) return false;
+        return name != null ? name.equals(apricot.name) : apricot.name == null;
+    }
+
+    @Override
+    public String toString() {
+        return "Apricot{" +
+                "cost=" + cost +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

@@ -5,7 +5,7 @@ public class Chamomile extends Flower {
     private int quantity;
 
     public Chamomile(int quantity) {
-        super(quantity);
+        super(quantity, "Chamomile",13);
         this.quantity = quantity;
     }
 

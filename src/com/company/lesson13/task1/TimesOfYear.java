@@ -1,18 +1,20 @@
 package com.company.lesson13.task1;
 
 public enum TimesOfYear {
-    WINTER("Зима", -10, "Холодное время года"),
-    SPRING("Весна", 15, "Холодное время года"),
-    SUMMER("Лето", 30, "Теплое время года"),
-    AUTUMN("Осень", 10, "Холодное время года");
+    WINTER("Зима", -10),
+    SPRING("Весна", 15),
+    SUMMER("Лето", 30) {
+        public String getDescription() {
+            return "Теплое время года";
+        }
+    },
+    AUTUMN("Осень", 10);
 
     private int temperature;
-    private String description;
     private String name;
 
-    TimesOfYear(String name, int temperature, String description) {
+    TimesOfYear(String name, int temperature) {
         this.temperature = temperature;
-        this.description = description;
         this.name = name;
     }
 
@@ -21,7 +23,7 @@ public enum TimesOfYear {
     }
 
     public String getDescription() {
-        return description;
+        return "Холодное время года";
     }
 
     public String getName() {
