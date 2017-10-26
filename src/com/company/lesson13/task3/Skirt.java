@@ -1,8 +1,8 @@
 package com.company.lesson13.task3;
 
 public class Skirt extends Cloth implements WomenClothing {
-    public Skirt(String  size, double cost, String colore) {
-        super(Size.valueOf(size).getEuroSize(),size, cost, colore);
+    public Skirt(String size, double cost, String colore) {
+        super(size, cost, colore);
     }
 
 

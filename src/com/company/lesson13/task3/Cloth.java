@@ -1,16 +1,16 @@
 package com.company.lesson13.task3;
 
 abstract class Cloth {
-    private int size;
+    private Size size;
     private double cost;
     private String colore;
     private String sizeName;
 
-    public Cloth(int size,String sizeName, double cost, String colore){
-        this.size = size;
+    public Cloth(String sizeName, double cost, String colore) {
         this.colore = colore;
         this.cost = cost;
         this.sizeName = sizeName;
+        this.size = Size.valueOf(sizeName);
     }
 
     public String getSizeName() {

@@ -1,8 +1,8 @@
 package com.company.lesson13.task3;
 
 public class Pans extends Cloth implements MenClothing, WomenClothing {
-    public Pans(String  size, double cost, String colore) {
-        super(Size.valueOf(size).getEuroSize(),size, cost, colore);
+    public Pans(String size, double cost, String colore) {
+        super(size, cost, colore);
     }
 
     @Override

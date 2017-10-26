@@ -1,25 +1,27 @@
 package com.company.lesson13.task3;
 
 public enum Size {
-    XXS("Детский размер", 32),
-    XS("Взрослый размер", 34),
-    S("Взрослый размер", 38),
-    M("Взрослый размер", 40),
-    L("Взрослый размер", 44);
+    XXS(32) {
+        public String getDescription() {
+            return "Детский размер";
+        }
+    },
+    XS(34),
+    S(38),
+    M(40),
+    L(44);
 
-    private String description;
     private int euroSize;
 
-    Size(String description, int euroSize){
-        this.description = description;
+    Size(int euroSize) {
         this.euroSize = euroSize;
     }
 
     public String getDescription() {
-        return description;
+        return "Взрослый размер";
     }
 
-    public int getEuroSize(){
+    public int getEuroSize() {
         return euroSize;
     }
 }
