@@ -6,5 +6,6 @@ public class PersonTest {
         Person person2 = new Person("Alexey", 21);
         person1.move();
         person2.talk();
+        System.out.println(person2);
     }
 }

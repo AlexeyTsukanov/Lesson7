@@ -10,5 +10,14 @@ public class PrintableTest {
 
         Book.printBook(printables);
         Magazines.printMagazines(printables);
+
+        Printable printable = new Printable() {
+            @Override
+            public void print() {
+                System.out.println("Переопределенный метод.");
+            }
+        };
+
+        printable.print();
     }
 }

@@ -19,4 +19,9 @@ public class Person {
     void talk() {
         System.out.println(fullName + " said: \" I`m " + age + " years old\"");
     }
+
+    @Override
+    public String toString() {
+        return String.format("Person: full name - %1$s, age %2$s", fullName, age);
+    }
 }
