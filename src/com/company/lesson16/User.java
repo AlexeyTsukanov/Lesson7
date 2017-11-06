@@ -28,7 +28,7 @@ public class User {
         this.password = password;
     }
 
-    static class Query2{
+    static class Query2 {
         public void printToLog() {
             System.out.println("Пользователь с логином: " + login + ", и паролем: " + password + " отправил запрос.");
         }
@@ -45,9 +45,9 @@ public class User {
         query.printToLog();
     }
 
-    public static void createUser2(){
-        class User2{
-            public void printLog(){
+    public static void createUser2() {
+        class User2 {
+            public void printLog() {
                 System.out.println("Пользователь с логином: " + login + ", и паролем: " + password + " отправил запрос.");
             }
         }
