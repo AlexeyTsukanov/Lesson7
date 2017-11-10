@@ -1,4 +1,4 @@
-package com.company.lesson16.Task6;
+package com.company.lesson16.task6;
 
 import com.company.lesson4.Garland;
 

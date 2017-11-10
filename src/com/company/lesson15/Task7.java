@@ -2,7 +2,7 @@ package com.company.lesson15;
 
 import java.text.MessageFormat;
 
-public class task7 {
+public class Task7 {
     public static void main(String[] args) {
         String[][] holidays = {{"01.01", "Новый год"}, {"07.01", "Рождество"},
                 {"08.03", "Женский день"}, {"01.05", "День труда"}, {"09.05", "День Победы"},

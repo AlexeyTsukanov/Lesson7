@@ -32,6 +32,7 @@ public class Apricot extends Fruit {
 
         Apricot apricot = (Apricot) o;
 
+        if (this.getWeight() != ((Fruit) o).getWeight()) return false;
         if (Double.compare(apricot.cost, cost) != 0) return false;
         return name != null ? name.equals(apricot.name) : apricot.name == null;
     }
@@ -39,7 +40,7 @@ public class Apricot extends Fruit {
     @Override
     public String toString() {
         return "Apricot{" +
-                "cost=" + cost +
+                "cost=" + cost + "weight=" + this.getWeight() +
                 ", name='" + name + '\'' +
                 '}';
     }

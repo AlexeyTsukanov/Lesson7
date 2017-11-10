@@ -32,6 +32,7 @@ public class Pear extends Fruit {
 
         Pear pear = (Pear) o;
 
+        if (this.getWeight() != ((Fruit) o).getWeight()) return false;
         if (Double.compare(pear.cost, cost) != 0) return false;
         return name != null ? name.equals(pear.name) : pear.name == null;
     }
@@ -39,7 +40,7 @@ public class Pear extends Fruit {
     @Override
     public String toString() {
         return "Pear{" +
-                "cost=" + cost +
+                "cost=" +  cost + "weight=" + this.getWeight() +
                 ", name='" + name + '\'' +
                 '}';
     }

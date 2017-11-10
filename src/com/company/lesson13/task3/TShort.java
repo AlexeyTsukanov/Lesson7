@@ -1,8 +1,8 @@
 package com.company.lesson13.task3;
 
 public class TShort extends Cloth implements MenClothing, WomenClothing {
-    public TShort(String size, double cost, String colore) {
-        super(size, cost, colore);
+    public TShort(String size, double cost, String color) {
+        super(size, cost, color);
     }
 
     @Override

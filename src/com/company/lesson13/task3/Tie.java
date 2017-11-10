@@ -1,7 +1,6 @@
 package com.company.lesson13.task3;
 
 public class Tie extends Cloth implements MenClothing {
-    String size;
 
     public Tie(String size, double cost, String colore) {
         super(size, cost, colore);
