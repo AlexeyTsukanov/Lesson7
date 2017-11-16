@@ -11,11 +11,11 @@ public class HeavyBoxTest {
         arrayList.add(new Student());
         arrayList.add(new Student());
         arrayList.add(new Student());
-        HeavyBoxFound.found(arrayList);
+        StudentFound.found(arrayList);
     }
 
 
-    public static class HeavyBoxFound {
+    public static class StudentFound {
         public static void found(List<Student> list) {
             for (Student student : list) {
                 System.out.println(student);

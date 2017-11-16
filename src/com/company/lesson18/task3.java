@@ -5,18 +5,18 @@ import java.util.*;
 public class task3 {
     public static void main(String[] args) {
         Set<String> listFirst = new HashSet<>();
-        listFirst .add("White");
-        listFirst .add("Black");
-        listFirst .add("Red");
+        listFirst.add("White");
+        listFirst.add("Black");
+        listFirst.add("Red");
 
         Set<String> listSecond = new HashSet<>();
 
-        listSecond .add("Green");
-        listSecond .add("Red");
-        listSecond .add("White");
+        listSecond.add("Green");
+        listSecond.add("Red");
+        listSecond.add("White");
 
-        System.out.println(test.intersect(listFirst,listSecond));
-        System.out.println(test.union(listFirst,listSecond));
+        System.out.println(test.intersect(listFirst, listSecond));
+        System.out.println(test.union(listFirst, listSecond));
 
     }
 
