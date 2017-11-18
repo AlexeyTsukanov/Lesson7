@@ -15,26 +15,24 @@ public abstract class Sort {
         @Override
         public int compare(ProductTest.Product o1, ProductTest.Product o2) {
             double d = o1.getCost() - o2.getCost();
-            if (d >= 0.1){
-                return 1;
-            }
-            if (d <= -0.1){
-                return -1;
-            }
-            return 0;
+            return check(d);
         }
     });
     public static SortedSet<ProductTest.Product> productsByRating = new TreeSet<>(new Comparator<ProductTest.Product>() {
         @Override
         public int compare(ProductTest.Product o1, ProductTest.Product o2) {
             double d = o1.getRating() - o2.getRating();
-            if (d >= 0.1) {
-                return 1;
-            }
-            if (d <= -0.1) {
-                return -1;
-            }
-            return 0;
+            return check(d);
         }
     });
+
+    private static int check(double d) {
+        if (d >= 0.1) {
+            return 1;
+        }
+        if (d <= -0.1) {
+            return -1;
+        }
+        return 0;
+    }
 }
