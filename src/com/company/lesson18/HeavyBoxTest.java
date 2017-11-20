@@ -14,7 +14,6 @@ public class HeavyBoxTest {
         StudentFound.found(arrayList);
     }
 
-
     public static class StudentFound {
         public static void found(List<Student> list) {
             for (Student student : list) {

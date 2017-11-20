@@ -2,7 +2,7 @@ package com.company.lesson18;
 
 import java.util.*;
 
-public class task3 {
+public class Task3 {
     public static void main(String[] args) {
         Set<String> listFirst = new HashSet<>();
         listFirst.add("White");
@@ -15,12 +15,12 @@ public class task3 {
         listSecond.add("Red");
         listSecond.add("White");
 
-        System.out.println(test.intersect(listFirst, listSecond));
-        System.out.println(test.union(listFirst, listSecond));
+        System.out.println(Test.intersect(listFirst, listSecond));
+        System.out.println(Test.union(listFirst, listSecond));
 
     }
 
-    public static class test {
+    public static class Test {
         public static Set<?> intersect(Set<?> set1, Set<?> set2) {
             Set<?> set3 = new HashSet<>(set1);
             set3.retainAll(set2);

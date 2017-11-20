@@ -1,7 +1,6 @@
 package com.company.lesson13.task3;
 
 abstract class Cloth {
-    private Size size;
     private double cost;
     private String color;
     private String sizeName;
@@ -10,7 +9,6 @@ abstract class Cloth {
         this.color = color;
         this.cost = cost;
         this.sizeName = sizeName;
-        this.size = Size.valueOf(sizeName);
     }
 
     public String getSizeName() {
@@ -19,7 +17,7 @@ abstract class Cloth {
 
     @Override
     public String toString() {
-        return "Размер : " + size +
+        return "Размер : " + Size.valueOf(sizeName) +
                 ", стоимость : " + cost +
                 ", цвет : " + color;
     }
@@ -31,9 +29,19 @@ abstract class Cloth {
 
         Cloth cloth = (Cloth) o;
 
-        if (size != cloth.size) return false;
         if (Double.compare(cloth.cost, cost) != 0) return false;
         if (color != null ? !color.equals(cloth.color) : cloth.color != null) return false;
         return sizeName != null ? sizeName.equals(cloth.sizeName) : cloth.sizeName == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(cost);
+        result = (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (color != null ? color.hashCode() : 0);
+        result = 31 * result + (sizeName != null ? sizeName.hashCode() : 0);
+        return result;
     }
 }

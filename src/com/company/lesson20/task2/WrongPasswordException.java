@@ -1,4 +1,4 @@
-package com.company.lesson20.Task2;
+package com.company.lesson20.task2;
 
 public class WrongPasswordException extends Exception {
 
