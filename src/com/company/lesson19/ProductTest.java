@@ -8,7 +8,9 @@ public class ProductTest extends Sort {
         products[0] = new Product("Шапка", 15.7,4.6);
         products[1] = new Product("Куртка", 20.5,3.8);
         products[2] = new Product("Штаны", 18.7,5.1);
+
         Category clothes = new Category(3,"одежда",products);
+
         System.out.println("Сортировка по имени:");
         System.out.println(sorted(clothes, productsByName));
 
@@ -17,6 +19,16 @@ public class ProductTest extends Sort {
 
         System.out.println("Сортировка по рейтингу:");
         System.out.println(sorted(clothes, productsByRating));
+
+        /*List<Product> clothesCategory = new ArrayList<>(clothes.getProducts());
+        clothesCategory.sort(new Comparator<Product>() {
+            @Override
+            public int compare(Product o1, Product o2) {
+                return o1.toString().compareTo(o2.toString());
+            }
+        });
+
+        System.out.println("Сортировка Compares.sort : " + clothesCategory);*/
     }
 
     private static TreeSet<Product> sorted(Category clothes, SortedSet<Product> product) {
