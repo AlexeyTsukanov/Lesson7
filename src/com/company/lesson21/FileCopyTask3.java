@@ -17,11 +17,11 @@ public class FileCopyTask3 {
         try (BufferedReader reader = new BufferedReader(new FileReader("src/com/company/lesson21/file.txt"));
              BufferedWriter writer = new BufferedWriter(new FileWriter("src/com/company/lesson21/fileBufferCopy.txt"))) {
             String s;
-            while ((s = reader.readLine()) != null){
+            while ((s = reader.readLine()) != null) {
                 writer.write(s);
                 writer.newLine();
-                writer.flush();
             }
+            writer.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -2,10 +2,7 @@ package com.company.lesson23;
 
 public class NewThread {
     public static void main(String[] args) {
-      /* MyTread myTread1 = new MyTread();
-       myTread1.start();*/
-
-       NewRunnable newRunnable = new NewRunnable();
+        NewRunnable newRunnable = new NewRunnable();
 
         Thread myTread1 = new Thread(newRunnable, "Tread1");
         Thread myTread2 = new Thread(newRunnable, "Tread2");
@@ -15,23 +12,16 @@ public class NewThread {
         myTread2.start();
         myTread3.start();
     }
-    public static class MyTread extends Thread {
-        public void run() {
-            for (int i = 0; i <= 100; i++) {
-                System.out.println(i);
-            }
-        }
-    }
 
-    public static class NewRunnable implements Runnable{
+    public static class NewRunnable implements Runnable {
         @Override
         public void run() {
-            for (int i = 0; i <= 100; i++){
-                if (i % 10 == 0){
+            for (int i = 0; i <= 100; i++) {
+                if (i % 10 == 0) {
                     System.out.println(i + " " + Thread.currentThread().getName());
                     try {
                         Thread.sleep(1000);
-                    }catch (InterruptedException ex){
+                    } catch (InterruptedException ex) {
                         ex.printStackTrace();
                     }
                 }

@@ -5,37 +5,34 @@ import java.util.Queue;
 
 public class MyQueue<T> {
     private Queue<T> n;
-    boolean valueSet = false;
 
     public MyQueue() {
         this.n = new LinkedList<>();
     }
 
     public synchronized T get() {
-        while (!valueSet) {
+        while (n.isEmpty()) {
             try {
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        System.out.println("Пoлyчeнo: " + n + ", от " + Thread.currentThread().getName());
-        valueSet = false;
-        notify();
+        System.out.println("Пoлyчeнo: " + n.element() + ", от " + Thread.currentThread().getName());
+        notifyAll();
         return n.remove();
     }
 
     public synchronized void put(T n) {
-        while (valueSet) {
+        while (!this.n.isEmpty()) {
             try {
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-        valueSet = true;
         this.n.add(n);
         System.out.println("Oтпpaвлeнo: " + n + ", к " + Thread.currentThread().getName());
-        notify();
+        notifyAll();
     }
 }

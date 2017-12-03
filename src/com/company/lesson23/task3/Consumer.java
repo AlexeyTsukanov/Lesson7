@@ -9,7 +9,7 @@ public class Consumer implements Runnable {
 
     @Override
     public void run() {
-        while (true){
+        while (true) {
             myQueue.get();
         }
     }

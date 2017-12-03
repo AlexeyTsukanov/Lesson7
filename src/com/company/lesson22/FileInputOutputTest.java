@@ -4,7 +4,8 @@ import java.io.*;
 
 public class FileInputOutputTest {
     public static void main(String args[]) {
-        try(OutputStream output = new FileOutputStream("src/io/a.txt");InputStream input = new FileInputStream("src/io/a.txt")) {
+        try (OutputStream output = new FileOutputStream("src/io/a.txt");
+             InputStream input = new FileInputStream("src/io/a.txt")) {
             char c[] = {'a', 'b', 'c'};
             for (char c1 : c) {
                 output.write(c1);

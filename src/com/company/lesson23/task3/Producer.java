@@ -10,7 +10,7 @@ public class Producer implements Runnable {
 
     @Override
     public void run() {
-        while (true){
+        while (true) {
             myQueue.put(i);
             i++;
         }

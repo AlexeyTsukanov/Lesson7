@@ -12,20 +12,20 @@ public class Task2 {
         m3.start();
     }
 
-    public static class MakeRun extends Thread{
+    public static class MakeRun extends Thread {
         private StringBuilder letter;
 
-        public MakeRun(StringBuilder letter){
+        public MakeRun(StringBuilder letter) {
             this.letter = letter;
         }
 
         public void run() {
-                for (int i = 0; i < 100; i++) {
-                    System.out.println(letter);
-                }
-                char newLetter = letter.charAt(0);
-                newLetter++;
-                letter.setCharAt(0, newLetter);
+            for (int i = 0; i < 100; i++) {
+                System.out.println(letter);
+            }
+            char newLetter = letter.charAt(0);
+            newLetter++;
+            letter.setCharAt(0, newLetter);
         }
     }
 }
